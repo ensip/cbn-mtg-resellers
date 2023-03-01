@@ -1,0 +1,137 @@
+body{margin:0px;font-family:Open Sans,Helvetica,Arial,sans-serif;font-size:0.7rem;background:#f7f8f9;}
+.container{max-width:2280px;}
+.container-bg{background-color: #f7f7f7;}
+
+
+h6,h5,h4,h3,h2,h1 {
+	margin:0px;
+}
+select {
+	font-size:0.7rem!important;
+}
+.cursor{
+	cursor:pointer;
+}
+.badge-lila, .bg-lila{
+    background-color: #8A2BE2;
+    color: white;
+}
+.badge-aceptado, .bg-aceptado{
+    background-color: #32CD32;
+    color: #383838;
+}
+.card-info{display:none;}
+.cards-orders, .cards-orders .input-group-text, .cards-orders input {
+	font-size:0.7rem!important;
+}
+.hide {
+	display:none;
+}
+.show {
+	display:block;
+}
+.li-active {
+	background-color:#ffe8c7;
+	font-weight:bold;
+}
+ul#list-searchs-product li{
+	font-size:0.89rem;
+}
+table td, table th {  border: 1px solid #ddd; padding: 8px;}
+table.table-orders tr:nth-child(odd){ background-color:white!important; }
+table.table-orders th.th_order_estado {
+	width : 200px;
+}
+table.table-orders th.th_order_productos {
+/*	width : 200px;*/
+}
+table tr:nth-child(even){ /*background-color:*/  }
+table tr:hover {background-color: beige!important;}
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #ddd;
+  color: black;
+}
+.table_specs{
+    width: 50%;
+    font-size: 0.85rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+}
+table .p_productos{}
+table td.data_cli ul{height: 60px;     overflow-y: scroll; }
+table td.td_url{ word-break:break-word; }
+.tr_head th{
+    background-color: #7e97a4!important;
+    color: white;
+    font-size: 0.85rem;
+}
+.div_menu{ background-color: aliceblue;padding:0.2rem 0.5rem;}
+.div_menu li{margin:1px;border:1px solid var(--success);}
+.div_menu li:hover{background-color:cornflowerblue;}
+.div_res{width: 100%;font-size:1rem;}
+.alarm{ background-color:#9c3f3f;color:white;text-transform:uppercase;padding:5px; }
+.div_table_prods table{ width: 100%;}
+.div_table_prods th{background-color: #7e97a4;}
+.div_table_prods th, .div_table_prods td{ padding:2px;}
+.flex-ordenes {	background-color:#f7f7f7;}
+.table-orders tr.tr_products.off {
+	display:none;
+}
+.table-orders tr.tr_products.on {
+    display:table-row;
+}
+#loading-btn, #loading-csv, #loading-orders {
+	display:none;
+}
+#card-body-info li {
+	overflow-y:auto;
+	font-size:.85rem;
+	font-weight:bold;
+}
+.modal-dialog {
+	width: 65%;
+	max-width: none;
+}
+.tr-facturas-non-visible {
+	display:none;
+}
+.table-shadow {
+	box-shadow: -2px 1px 11px -4px #16181a;
+}
+table#tabla_productos tr.tr-facturas:hover{
+	    background-color: inherit!important;
+}
+.card-search .card {
+}
+.card-search .card .input-group{
+	margin: 2.5px 0px;
+}
+
+.card-search .card {
+	border: 0px;
+	border-radius: 0;
+}
+.card-search .card:first-child{
+	border-top-left-radius: 0.25rem;
+	border-bottom-left-radius: 0.25rem;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.card-search .card:last-child{
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.div_exportar {
+	margin-right:10px;
+}
+.div_updating_order {
+	display:none;
+}
+#filters-info .h6 {
+	margin: 1px 2px 2px 0px; 
+}

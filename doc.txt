@@ -1,0 +1,20 @@
+Ya tengo el mostrar información del balance
+mostrar ordenes, si hay o no hay.
+
+TODO:
+1. información relativa: cantidad total ordenes, filtros aplicados
+2. si le doy a buscar que aplique en la búsqueda
+3. exportar ordenes para conciliar
+4. gestion de errores?
+5. crear pdf
+6. cuando tenga los estados reales formatear bien los valores
+--------------------------
+
+How to:
+
+2. crear un eventhandler para que al pulsar en buscar coja los campos a buscar y los pase al ajax y a su action
+1. generar información y mostrarla en su apartado: como siempre badges según si hay filtros,fechas, cantidad total.
+3. al darle a exportar eventhandler click
+4. que pasa si falla la búsqueda de ordenes, o del balance?
+
+
