@@ -1,7 +1,8 @@
 <?php 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+error_reporting(0); //E_ALL
+ini_set('display_errors', 0);
 if (!isset($_SESSION)) {
+	session_cache_expire(480);
 	session_start();
 }
 include_once('/usr/local/lib/jyctel/tools/mh/conf/config.php');

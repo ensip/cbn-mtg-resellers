@@ -16,5 +16,3 @@ How to:
 1. generar información y mostrarla en su apartado: como siempre badges según si hay filtros,fechas, cantidad total.
 3. al darle a exportar eventhandler click
 4. que pasa si falla la búsqueda de ordenes, o del balance?
-
-
