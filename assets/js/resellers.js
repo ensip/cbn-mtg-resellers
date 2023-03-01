@@ -25,13 +25,13 @@ class fetch {
 	  }	  
   }
   static async Orders (filters) {
-	  console.log(filters, 'fetchOrders');
+	  //console.log(filters, 'fetchOrders');
 	  try {
 		  let response = await axios.post(urls.ajax, {
 				  get_orders_reseller: 1,
 				  filters: filters  
 		  });
-		  console.log(response, 'response-fetchOrders');
+		  //console.log(response, 'response-fetchOrders');
 		  return response.data;
 
 	  } catch (error) {
@@ -82,8 +82,8 @@ class html {
 	}
 
 	static divFilters(info, filters) {
-		console.log(resellers);
-		console.log(info, filters, 'total&filters');
+		//console.log(resellers);
+		//console.log(info, filters, 'total&filters');
 		let divFilters = `<div class="h6"><span class="badge badge-info">Total: ${info.total}</span></div>`;
 		divFilters += `<div class="h6"><span class="badge badge-info">Total Ventas: ${info.total_sales}</span></div>`;
 
@@ -93,7 +93,7 @@ class html {
 			divFilters += Object.keys(filters)
 				.filter((key, value) => key != 'hay_filtros')
 			    .map( (key,v) => {
-					console.log(key, filters[key]);
+					//console.log(key, filters[key]);
 					let value = filters[key];
 					if (key == 'order_state') {
 						value = resellers.order_option_selected;
@@ -268,10 +268,10 @@ export const resellers = {
   clickHandler: function (event) {
 	  console.clear();
 	  const elementClicked = (event.target.name == '' ? event.target.getAttribute('attr-name') : event.target.name);
-	  console.log(elementClicked);	  
+	  //console.log(elementClicked);	  
 	  switch (elementClicked) {
           case 'filter':
-	          console.log('buscar ORdenes con filtros');
+	          //console.log('buscar ORdenes con filtros');
 	          resellers.renderOrders();
       break;
           case 'export-orders':
@@ -300,7 +300,7 @@ export const resellers = {
   getFilters: function () {
 	  const form = document.getElementById('form-filter-orders');
 	  const formData = new FormData(form);
-	  console.log(formData,'getFilters');
+	  //console.log(formData,'getFilters');
       const filterPost = {};
 	  let hay_filtros = false;
 	  for (const [key, value] of formData) {
@@ -366,12 +366,17 @@ export const resellers = {
   renderOrders: async function () {
 	  
       const filterPost = resellers.getFilters();
-      console.log(filterPost, 'filterPost');	  
+      //console.log(filterPost, 'filterPost');	  
 	  resellers.showLoading(html.idLoadingOrders);
 
 	  let res = await fetch.Orders(filterPost);
-      console.log(res);
+      //console.log(res);
 	  if (res !== false) {
+		  if (res.hasOwnProperty('error')) {
+			  if (res.error == 'no-session') {
+				location = 'login.php';
+			  }
+		  }
           let total = res.info_labels?.total;
 		  resellers.showLoading(html.idLoadingOrders, true);
 
@@ -401,15 +406,15 @@ export const resellers = {
 	  (!hide) ? $(e).show() : $(e).hide();;
   },
   showMessages: async (id) => {
-	  console.log('buscar mensajes de: ' + id);
+	  //console.log('buscar mensajes de: ' + id);
 	  let html_messages = '';
 	  let messages = await fetch.Messages(id);
-	  console.log(parseInt(messages.length));
+	  
 	  if (parseInt(messages.length) >= 1) {
 		  html_messages = `<table class="table m-0">
 			  <thead><th>Fecha</th><th>Mensaje</th></thead>`;
 		  messages.map((msg) => {
-			  console.log(msg);
+			  //console.log(msg);
               html_messages += `<tr><td>${msg.date_add}</td><td>${msg.message}</td></tr>`;
 		  });
 		  html_messages += `</table>`;

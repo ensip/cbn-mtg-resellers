@@ -2,6 +2,12 @@
 if (!isset($_SESSION)) {
 	session_start();
 }
+if (empty($_SESSION)) {
+	syslog(LOG_INFO, __file__ . ': warning:empty SESSION'.serialize($_SESSION));
+	$res = ['error' => 'no-session'];	
+	echo json_encode($res);
+	exit;
+}
 include_once('/usr/local/lib/jyctel/tools/mh/conf/config.php');
 include_once(__dir__ . '/../config.php');
 

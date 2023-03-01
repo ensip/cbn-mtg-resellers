@@ -186,7 +186,7 @@ class ResellersModel {
 				$order = new Order($id_order);//order by id
 
 				if (!$this->hayOrden($id_order)) {
-					syslog(LOG_INFO, __method__ . ':!hayOrden: getCustomerOrders');
+					syslog(LOG_INFO, __method__ . ':!hayOrden: getCustomerOrders '.$customer_id.'');
 					
 					$orders = $order->getCustomerOrders($customer_id, false, null, 0, 200); //order customer OK, funciona
 					if (!empty($ids_order_state)) {
