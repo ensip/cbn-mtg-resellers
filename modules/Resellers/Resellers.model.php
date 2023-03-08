@@ -254,7 +254,7 @@ class ResellersModel {
 			5 => 'ENTREGADO',
 			6 => 'CANCELADO',
 			7 => 'EN TRAMITE',
-			8 => 'EN TRAMITE',
+			8 => 'CANCELADO',
 			9 => 'EN TRAMITE',
 			10 => 'EN TRAMITE',
 			11 => 'EN TRAMITE',
